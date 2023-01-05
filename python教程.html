@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Zhang Xun">
+    <title>python教程</title>
+    <style>
+        h1 {font-size:40px;}
+        h2 {font-size:36px;}
+        h3 {font-size:33px;}
+        h4 {font-size:30px;}
+        h5 {font-size:27px;}
+        h6 {font-size:25px;}
+        p {font-weight:600; font-size:22px;}
+        pre {font-weight:700; font-size:22px;}
+        p.r {color:red}
+    </style>
+</head>
+<body>
+    <h1>
+        <big>
+            欢迎学习python
+        </big>
+    </h1>
+        <p style="text-indent:2em;">
+            目前python最新版本是python3.11, 本教程主要针对Python3.x版本的学习同时会涉及一点python2版本
+        </p>
+        <p style="text-indent:2em;">
+            Python的3.0版本, 常被称为Python3000, 或简称Py3k。相对于Python的早期版本, 这是一个较大的升级。为了不带入过多的<br>
+            累赘, Python3.0在设计的时候没有考虑向下兼容。官方宣布, 2020年1月1日, 停止Python2的更新。
+        </p>
+        <hr>
+        <h2>
+            python解释器的安装与环境搭建
+        </h2>
+            <p style="text-indent:2em;">
+                Python已经被移植在许多平台上(经过改动使它能够工作在不同平台上)。您需要下载适用于您使用平台的二进制代码, 然后安装<br>
+                Python。如果您平台的二进制代码是不可用的, 你需要使用C编译器手动编译源代码。编译的源代码, 功能上有更多的选择性, 为Pyt<br>
+                hon安装提供了更多的灵活性。
+            </p>
+            <br>
+            <p>
+                以下为不同平台上安装Python3的方法。
+            </p>
+            <h3>
+                Unix&Linux平台安装Python3:
+            </h3>
+                <p>
+                    以下为在Unix&Linux平台上安装Python的简单步骤:
+                </p>
+                <p style="text-indent:2em;">
+                    1.打开浏览器访问
+                    <a href="https://www.python.org/downloads/source/">https://www.python.org/downloads/source/
+                    </a>
+                </p>
+                <p style="text-indent:2em;">
+                    2.选择适用于Unix/Linux的源码压缩包
+                </p>
+                <p style="text-indent:2em;">
+                    3.下载及解压压缩包Python-3.x.x.tgz, 3.x.x为你下载的对应版本号。
+                </p>
+                <p style="text-indent:2em;">
+                    4.如果你需要自定义一些选项修改Modules/Setup。
+                </p>
+                <p>以
+                    <strong>
+                        python3.6.1
+                    </strong>
+                        版本为例：
+                </p>
+                <p style="text-indent:2em;">
+                    # tar -zxvf Python-3.6.1.tgz
+                </p>
+                <p style="text-indent:2em;">
+                    # cd Python-3.6.1
+                </p>
+                <p style="text-indent:2em;">
+                    # ./configure
+                </p>
+                <p style="text-indent:2em;">
+                    # make && make install
+                </p>
+                <p>
+                    检查Python3是否正常可用:
+                </p>
+                <p style="text-indent:2em;">
+                    # python3 -V
+                    Python 3.6.1
+                </p>
+            <h3>
+                Window平台安装python:
+            </h3>
+                <p style="text-indent:2em;">
+                    浏览器访问<a href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a>, 一般下载图中这两个之一, 32-bit表示是32位机子的, 64-bit表<br>
+                    示64位机子的。
+                </p>
+                <img src="D:/guolirong/张迅文件/张迅 (1)/编程/练/完整项目/python教程/images/anzhuangbaoxuanze.jpg" alt="安装包选择" width="500" height="500">
+                <p>
+                    点击后等待下载完成。下载完成后双击打开。
+                </p>
+                <p class="r">
+                    1.勾选Add Python 3.X to PATH(这一步很重要，不要忘记)
+                </p>
+                <p>
+                    2.选择自定义安装(点击Customize installation), 在这一步可以修改python安装的位置(一定记住路径)。其他步骤直接选择install。
+                </p>
+                <p>
+                    3.等待下载完成后, 按windows+R键,在弹出的运行栏里输入cmd。
+                </p>
+                <p>
+                    4.在cmd界面输入python。如果出现下图所示的内容, 即为安装成功。
+                </p>
+                <img src="D:/guolirong/张迅文件/张迅 (1)/编程/练/完整项目/python教程/images/cmd.jpg" alt="python解释器">
+            <h3>
+                MAC平台安装python
+            </h3>
+                <p style="text-indent:2em;">
+                    MAC系统都自带有Python2.7环境, 你可以在<a href="https://www.python.org/downloads/mac-osx/">https://www.python.org/downloads/mac-osx/</a>上下载最新版安装Python3.x。你也<br>
+                    可以参考源码安装的方式来安装。
+                </p>
+                <hr>
+            <h3>
+                环境变量
+            </h3>
+                <p>
+                    关于环境变量的问题, 如果你之前勾选Add Python 3.X to PATH这一步没有忘记的话, 一般都是已经配置完成了
+                </p>
+                <hr>
+        <h2>
+            运行python
+        </h2>
+            <p>
+                如果你是新手, 我建议使用python解释器, 因为如果是其他功能比较强的强大的编辑器一般都有代码补全功能, 这对你的学习不是特别<br>
+                好, 在入门阶段, python解释器就够了。
+            </p>
+
+
+
+</body>
+</html>
