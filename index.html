@@ -20,26 +20,17 @@
             background-color: rgba(183, 217, 251, 1);
             height: 100%;
         }
-
         @media (prefers-color-scheme: dark) {
             html {
                 --ntp-focus-shadow-color: rgba(var(--google-blue-300-rgb), .5);
                 --ntp-theme-text-color: white;
             }
         }
-
         html[has-custom-background] {
             background-image: -webkit-image-set(
                 url(chrome://theme/IDR_THEME_NTP_BACKGROUND?) 1x,
                 url(chrome://theme/IDR_THEME_NTP_BACKGROUND@2x?) 2x);
         }
-
-        cr-most-visited {
-            --most-visited-focus-shadow: 0 0 0 2px var(--ntp-focus-shadow-color);
-            --most-visited-text-color: var(--ntp-theme-text-color);
-            --most-visited-text-shadow: none;
-        }
-
         html[has-custom-background] cr-most-visited {
             --most-visited-text-shadow: 0 0 16px rgba(0, 0, 0, .3);
         }
@@ -72,15 +63,15 @@
         </h1>
     </div>
     <hr>
-    <div id="menu" style="height:500px;width:300px;float:left;text-align:center">
+    <div id="menu" style="height:500px;width:600px;float:left;text-align:center">
         <h2>
-            <big>
-                加密
-            </big>
+            加密
         </h2>
         <br>
         <form action="">
             原数据: <input type="text" name="原数据">
+            <br>
+            <input type="submit" value="加密">
             <br>
             加密数据: <input type="text" name="加密数据">
         </form>
@@ -97,50 +88,5 @@
             <p>
                 以下为不同平台上安装Python3的方法。
             </p>
-            <h3>
-                Unix&Linux平台安装Python3:
-            </h3>
-                <p>
-                    以下为在Unix&Linux平台上安装Python的简单步骤:
-                </p>
-                <p style="text-indent:2em;">
-                    1.打开浏览器访问
-                    <a href="https://www.python.org/downloads/source/">https://www.python.org/downloads/source/
-                    </a>
-                </p>
-                <p style="text-indent:2em;">
-                    2.选择适用于Unix/Linux的源码压缩包
-                </p>
-                <p style="text-indent:2em;">
-                    3.下载及解压压缩包Python-3.x.x.tgz, 3.x.x为你下载的对应版本号。
-                </p>
-                <p style="text-indent:2em;">
-                    4.如果你需要自定义一些选项修改Modules/Setup。
-                </p>
-                <p>以
-                    <strong>
-                        python3.6.1
-                    </strong>
-                        版本为例：
-                </p>
-                <p style="text-indent:2em;">
-                    # tar -zxvf Python-3.6.1.tgz
-                </p>
-                <p style="text-indent:2em;">
-                    # cd Python-3.6.1
-                </p>
-                <p style="text-indent:2em;">
-                    # ./configure
-                </p>
-                <p style="text-indent:2em;">
-                    # make && make install
-                </p>
-                <p>
-                    检查Python3是否正常可用:
-                </p>
-                <p style="text-indent:2em;">
-                    # python3 -V
-                    Python 3.6.1
-                </p>
 </body>
 </html>
