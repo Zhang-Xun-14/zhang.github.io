@@ -20,20 +20,6 @@
             background-color: rgba(183, 217, 251, 1);
             height: 100%;
         }
-        @media (prefers-color-scheme: dark) {
-            html {
-                --ntp-focus-shadow-color: rgba(var(--google-blue-300-rgb), .5);
-                --ntp-theme-text-color: white;
-            }
-        }
-        html[has-custom-background] {
-            background-image: -webkit-image-set(
-                url(chrome://theme/IDR_THEME_NTP_BACKGROUND?) 1x,
-                url(chrome://theme/IDR_THEME_NTP_BACKGROUND@2x?) 2x);
-        }
-        html[has-custom-background] cr-most-visited {
-            --most-visited-text-shadow: 0 0 16px rgba(0, 0, 0, .3);
-        }
     </style>
 </head>
 <body>
@@ -46,7 +32,7 @@
         </h1>
     </div>
     <hr>
-    <div id="menu" style="height:500px;width:600px;float:left;text-align:center">
+    <div id="menu" style="height:600px;width:1150px;float:left;text-align:center">
         <h2>
             加密
         </h2>
