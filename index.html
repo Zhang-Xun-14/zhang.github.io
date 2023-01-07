@@ -20,13 +20,15 @@
             background-color: rgba(183, 217, 251, 1);
             height: 100%;
         }
-        input.gr {
+        button.gr {
             background-color: rgb(0, 151, 0)
         }
         textarea.wg {
             background-color: rgb(204, 251, 204)
         }
     </style>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
 <body>
     <div id="container" style="width:1500px">
@@ -38,14 +40,16 @@
         </h1>
     </div>
     <hr>
-    <div id="menu" style="height:700px;width:1450px;text-align:center;">
+    <div id="menu" style="height:500px;width:1450px;text-align:center;">
         <form name="input" action="password.php" method="post" style="text-align:center">
-            <big>原数据:</big> <textarea style="width:1250px;height:200px;margin-bottom:5;" id="contents" rows="10" class="wg">这里是要加密的内容！</textarea>
+            <big>数据:</big> <textarea style="width:1250px;height:200px;margin-bottom:5;" id="contents" rows="10" class="wg">这里是要加密或解密的内容！</textarea>
             <br>
-            <input class="gr" type="submit" value="加密" style="width:80px;height:50px;">
-            <input class="gr" type="submit" value="解密" style="width:80px;height:50px;">
-            <br>
-            <big>加密数据:</big> <textarea style="width:1250px;height:200px;margin-bottom:5;" id="contents" rows="10" class="wg">这里是要加密的内容！</textarea>
+            <button class="gr" type="submit" style="width:80px;height:50px;">加密</button>
+            <button class="gr" type="submit" style="width:80px;height:50px;">解密</button>
+            <!--https://zhang-xun-14.github.io/zhang.github.io/password.php-->
+            <py-script>
+	            print("不知道哇")
+            </py-script>
         </form>
     </div>
 </body>
