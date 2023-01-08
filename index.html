@@ -23,7 +23,7 @@
         button.gr {
             background-color: rgb(0, 151, 0)
         }
-        textarea.wg {
+        input.wg {
             background-color: rgb(204, 251, 204)
         }
     </style>
@@ -40,9 +40,9 @@
     <hr>
     <div id="menu" style="height:700px;width:1450px;text-align:center;">
         <form name="input" action="password.php" method="post" style="text-align:center">
-            <big>数据:</big> <textarea style="width:1250px;height:200px;margin-bottom:5;" id="contents" rows="10" class="wg">这里是要加密或解密的内容！</textarea>
+            <big>数据:</big> <input style="width:1250px;height:150px;margin-bottom:5;" id="contents" rows="10" class="wg">
             <br>
-            <button class="gr" type="submit" style="width:80px;height:50px;">加密</button>
+            <button class="gr" type="submit" style="width:80px;height:50px;" onclick="j()">加密</button>
             <script>
             function j(d) {
                 var n = -1;
