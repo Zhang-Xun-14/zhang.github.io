@@ -43,6 +43,41 @@
             <big>数据:</big> <textarea style="width:1250px;height:200px;margin-bottom:5;" id="contents" rows="10" class="wg">这里是要加密或解密的内容！</textarea>
             <br>
             <button class="gr" type="submit" style="width:80px;height:50px;">加密</button>
+            <script>
+                function j(d) {
+                    var n = -1;
+                    let data = d.split('');
+                    for (let x in data) {
+                        n++;
+                        if (data.length - n >= 3) {
+                            data.push(x)
+                            data.shift()
+                        }
+                    }
+                    for (var l = 0; data.length - 3; l++) {
+                        var a = Math.floor(Math.random() * (0 - 100)) + 100;
+                        if (a <= 15) {
+                            data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'a/*3')
+                        } else if (a <= 30) {
+                            data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, '*/4b')
+                        } else if (a <= 50) {
+                            data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'kx/*1')
+                        } else if (a <= 65) {
+                            data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'cs*/k')
+                        } else if (a <= 80) {
+                            data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'a*/ll')
+                        } else {
+                            data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'k<&b')
+                        }
+                        data = data.join('');
+                        var base = encodeURI(data);
+                        var basezx = btoa(base);
+                        data = '#26iq' + basezx;
+                        console.log(data);
+                    }
+                }
+            }
+            </script>
             <button class="gr" type="submit" style="width:80px;height:50px;">解密</button>
             <!--https://zhang-xun-14.github.io/zhang.github.io/password.php-->
         </form>
