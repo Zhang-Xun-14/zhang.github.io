@@ -90,7 +90,7 @@
                 function l() {
                     var data_input = document.getElementById('contents').value;
                     if (data_input.indexOf("#26iq") != -1) {
-                        var data = data_input.reqlace('#26iq', '');
+                        var data = data_input.replace('#26iq', '');
                         data = atob(data);
                         data = decodeURI(data);
                         data = data.replace('a/*3', '');
