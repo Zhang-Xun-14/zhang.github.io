@@ -52,7 +52,7 @@
                 for (let x in data) {
                     n++;
                     if (data.length - n >= 3) {
-                        data.push(data[x]);
+                        data.push(data[0]);
                         data.shift();
                     }
                 }
@@ -63,25 +63,26 @@
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'a/*3');
                         break;
                         case (a <= 30):
-                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, '*/4b')
+                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, '*/4b');
                         break;
                         case (a <= 50):
-                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'kx/*1')
+                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'kx/*1');
                         break;
                         case (a <= 65):
-                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'cs*/k')
+                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'cs*/k');
                         break;
                         case (a <= 80):
-                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'a*/ll')
+                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'a*/ll');
                         break;
                         default:
-                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'k<&b')
+                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'k<&b');
                     }
                     data = data.join('');
                     var base = encodeURI(data);
                     var basezx = btoa(base);
                     data = '#26iq' + basezx;
-                    console.log(data);
+                    document.getElementById('kw').value=data;
+                    //console.log(data);
                     // document.write("<p>data</p>");
                 }
             }
