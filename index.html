@@ -56,7 +56,7 @@
                         data.shift();
                     }
                 }
-                for (var l = 0; data.length - 3; l++) {
+                for (var l = 0; l < data.length - 3; l++) {
                     var a = Math.floor(Math.random() * (0 - 100)) + 100;
                     if (a <= 15) {
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, 'a/*3');
@@ -82,6 +82,9 @@
                 var basezx = btoa(base);
                 data = '#26iq' + basezx;
                 document.getElementById('contents').value=data;
+                alert(data);
+                alert('将在10秒后消失');
+                setTimeout(10000);
             }
             </script>
             <button class="gr" type="submit" style="width:80px;height:50px;">解密</button>
