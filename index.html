@@ -47,31 +47,31 @@
             <script>
             function j() {
                 var n = -1;
-                let data_input = document.getElementById('contents').value;
-                let data = data_input.split('');
+                var data_input = document.getElementById('contents').value;
+                var data = data_input.split('');
                 for (let x in data) {
                     n++;
                     if (data.length - n >= 3) {
-                        data.push(x);
+                        data.push(data[x]);
                         data.shift();
                     }
                 }
                 for (var l = 0; data.length - 3; l++) {
                     var a = Math.floor(Math.random() * (0 - 100)) + 100;
                     switch (a) {
-                        case a <= 15:
+                        case (a <= 15):
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'a/*3');
                         break;
-                        case a <= 30:
+                        case (a <= 30):
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, '*/4b')
                         break;
-                        case a <= 50:
+                        case (a <= 50):
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'kx/*1')
                         break;
-                        case a <= 65:
+                        case (a <= 65):
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'cs*/k')
                         break;
-                        case a <= 80:
+                        case (a <= 80):
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'a*/ll')
                         break;
                         default:
