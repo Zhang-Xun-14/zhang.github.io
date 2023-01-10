@@ -81,13 +81,37 @@
                 var base = encodeURI(data);
                 var basezx = btoa(base);
                 data = '#26iq' + basezx;
-                document.getElementById('contents').value=data;
+                // document.getElementById('contents').value=data;
                 alert(data);
-                alert('将在10秒后消失');
-                setTimeout(10000);
             }
             </script>
-            <button class="gr" type="submit" style="width:80px;height:50px;">解密</button>
+            <button class="gr" type="submit" style="width:80px;height:50px;" onclick="l()">解密</button>
+            <script>
+                function l() {
+                    var data_input = document.getElementById('contents').value;
+                    if (data_input.indexOf("#26iq") != -1) {
+                        var data = data_input.reqlace('#26iq', '');
+                        data = atob(data);
+                        data = decodeURI(data);
+                        data = data.replace('a/*3', '');
+                        data = data.replace('*/4b', '');
+                        data = data.replace('kx/*1', '');
+                        data = data.replace('cs*/k', '');
+                        data = data.replace('a*/ll', '');
+                        data = data.replace('k<&b', '');
+                        data = data_input.split('');
+                        for (let i = 0; i < data.length; i++) {
+                            if (i + 2 < data.length) {
+                                data.unshift(data[data.length - 1]);
+                                data.pop();
+                            }
+                        }
+                        data = data.join('')
+                        // document.getElementById('contents').value=data;
+                        alert(data);
+                    }
+                }
+            </script>
             <!--https://zhang-xun-14.github.io/zhang.github.io/password.php-->
         </form>
     </div>
