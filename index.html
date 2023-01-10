@@ -53,30 +53,36 @@
                     n++;
                     if (data.length - n >= 3) {
                         data.push(x);
-                        data.shift()
+                        data.shift();
                     }
                 }
                 for (var l = 0; data.length - 3; l++) {
                     var a = Math.floor(Math.random() * (0 - 100)) + 100;
-                    if (a <= 15) {
-                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'a/*3')
-                    } else if (a <= 30) {
+                    switch (a) {
+                        case a <= 15:
+                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'a/*3');
+                        break;
+                        case a <= 30:
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, '*/4b')
-                    } else if (a <= 50) {
+                        break;
+                        case a <= 50:
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'kx/*1')
-                    } else if (a <= 65) {
+                        break;
+                        case a <= 65:
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'cs*/k')
-                    } else if (a <= 80) {
+                        break;
+                        case a <= 80:
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'a*/ll')
-                    } else {
+                        break;
+                        default:
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 1, 'k<&b')
                     }
                     data = data.join('');
                     var base = encodeURI(data);
                     var basezx = btoa(base);
                     data = '#26iq' + basezx;
-                    // console.log(data);
-                    document.write("<p>data</p>");
+                    console.log(data);
+                    // document.write("<p>data</p>");
                 }
             }
             </script>
