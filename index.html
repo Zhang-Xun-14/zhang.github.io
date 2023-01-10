@@ -58,33 +58,30 @@
                 }
                 for (var l = 0; data.length - 3; l++) {
                     var a = Math.floor(Math.random() * (0 - 100)) + 100;
-                    switch (a) {
-                        case (a <= 15):
+                    if (a <= 15) {
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, 'a/*3');
                         break;
-                        case (a <= 30):
+                    } else if (a <= 30) {
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, '*/4b');
                         break;
-                        case (a <= 50):
+                    } else if (a <= 50) {
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, 'kx/*1');
                         break;
-                        case (a <= 65):
+                    } else if (a <= 65) {
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, 'cs*/k');
                         break;
-                        case (a <= 80):
+                    } else if (a <= 80) {
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, 'a*/ll');
                         break;
-                        default:
+                    } else {
                         data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, 'k<&b');
                     }
-                    data = data.join('');
-                    var base = encodeURI(data);
-                    var basezx = btoa(base);
-                    data = '#26iq' + basezx;
-                    document.getElementById('contents').value=data;
-                    // console.log(data);
-                    // document.write("<p>data</p>");
                 }
+                data = data.join('');
+                var base = encodeURI(data);
+                var basezx = btoa(base);
+                data = '#26iq' + basezx;
+                document.getElementById('contents').value=data;
             }
             </script>
             <button class="gr" type="submit" style="width:80px;height:50px;">解密</button>
