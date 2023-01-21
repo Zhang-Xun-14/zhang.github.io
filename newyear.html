@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+	<meta http-equiv="Content-Type" content="text/html;charset=gb2312"  charset="UTF-8">
 	<style>
 		body{margin:0;padding:0;overflow: hidden;}
 		.city{width:100%;position:fixed;bottom: 0px;z-index: 100;}
 		.city img{width: 100%;}
 	</style>
-	<title>html5夜景放烟花绽放动画效果</title>
+	<title></title>
 </head>
 <body onselectstart = "return false">
 <div style="height:700px;overflow:hidden;">
@@ -83,28 +83,6 @@
 			raf(animate);
 		}
 
-		function drawMoon(){
-			var moon = document.getElementById("moon");
-			var centerX = canvas.width-200 , centerY = 100 , width = 80;
-			if(moon.complete){
-				ctx.drawImage(moon , centerX , centerY , width , width )
-			}
-			else {
-				moon.onload = function(){
-					ctx.drawImage(moon ,centerX , centerY , width , width)
-				}
-			}
-			var index = 0;
-			for(var i=0;i<10;i++){
-				ctx.save();
-				ctx.beginPath();
-				ctx.arc(centerX+width/2 , centerY+width/2 , width/2+index , 0 , 2*Math.PI);
-				ctx.fillStyle="rgba(240,219,120,0.005)";
-				index+=2;
-				ctx.fill();
-				ctx.restore();
-			}
-		}
 		Array.prototype.foreach = function(callback){
 			for(var i=0;i<this.length;i++){
 				if(this[i]!==null) callback.apply(this[i] , [i])
