@@ -15,13 +15,16 @@
         pre {font-weight:700; font-size:22px;}
         p.r {color:red}
         div.round {border:2px solid #000}
-        a {font-size:22px}
+        a {
+            font-size:22px;
+            texte-decoration:none
+        }
     </style>
 </head>
 <body>
     <div id="title" style="height:60px">
         <div id="header" style="background-color:#4d94ff;clear:both;text-align:center;height:55px;">
-            <h1 style="margin-bottom:0;">
+            <h1 style="margin-bottom:0;" id="head">
                 欢迎学习python
             </h1>
         </div>
@@ -43,23 +46,22 @@
         <div class="round" style="text-align:center;background-color:#FFFFFF;">
             <a href="#title1">
                 <big>
-                    python解释器的安装与环境搭建
+                    1.python解释器的安装与环境搭建
                 </big>
             </a>
         </div>
         <hr>
         <h2 id="title1">
-            python解释器的安装与环境搭建
+            1.python解释器的安装与环境搭建
         </h2>
-            <p style="text-indent:2em;">
-                Python已经被移植在许多平台上(经过改动使它能够工作在不同平台上)。您需要下载适用于您使用平台的二进制代码, 然后安装<br>
-                Python。如果您平台的二进制代码是不可用的, 你需要使用C编译器手动编译源代码。编译的源代码, 功能上有更多的选择性, 为Pyt<br>
-                hon安装提供了更多的灵活性。
-            </p>
-            <br>
-            <p>
-                以下为不同平台上安装Python3的方法。
-            </p>
+        <div id="title1-data">
+            <div class="round" style="text-align:center;background-color:#FFFFFF;">
+                <a href="#head">
+                    <big>
+                        返回顶部
+                    </big>
+                </a>
+            </div>
             <h3>
                 Unix&Linux平台安装Python3:
             </h3>
@@ -77,33 +79,12 @@
                 <p style="text-indent:2em;">
                     3.下载及解压压缩包Python-3.x.x.tgz, 3.x.x为你下载的对应版本号。
                 </p>
-                <p style="text-indent:2em;">
-                    4.如果你需要自定义一些选项修改Modules/Setup。
-                </p>
-                <p>以
-                    <strong>
-                        python3.6.1
-                    </strong>
-                        版本为例：
-                </p>
-                <p style="text-indent:2em;">
-                    # tar -zxvf Python-3.6.1.tgz
-                </p>
-                <p style="text-indent:2em;">
-                    # cd Python-3.6.1
-                </p>
-                <p style="text-indent:2em;">
-                    # ./configure
-                </p>
-                <p style="text-indent:2em;">
-                    # make && make install
-                </p>
                 <p>
                     检查Python3是否正常可用:
                 </p>
                 <p style="text-indent:2em;">
                     # python3 -V
-                    Python 3.6.1
+                    输出:Python 3.X.X
                 </p>
             <h3>
                 Window平台安装python:
@@ -112,7 +93,7 @@
                     浏览器访问<a href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a>, 一般下载图中这两个之一, 32-bit表示是32位机子的, 64-bit表<br>
                     示64位机子的。
                 </p>
-                <img src="D:/guolirong/张迅文件/张迅 (1)/编程/练/完整项目/python教程/images/anzhuangbaoxuanze.jpg" alt="安装包选择" width="500" height="500">
+                <img src="anzhuangbaoxuanze.jpg" alt="安装包选择" width="500" height="500">
                 <p>
                     点击后等待下载完成。下载完成后双击打开。
                 </p>
@@ -130,7 +111,7 @@
                 </p>
                 <img src="D:/guolirong/张迅文件/张迅 (1)/编程/练/完整项目/python教程/images/cmd.jpg" alt="python解释器">
             <h3>
-                MAC平台安装python
+                MAC平台安装python:
             </h3>
                 <p style="text-indent:2em;">
                     MAC系统都自带有Python2.7环境, 你可以在<a href="https://www.python.org/downloads/mac-osx/">https://www.python.org/downloads/mac-osx/</a>上下载最新版安装Python3.x。你也<br>
@@ -144,13 +125,14 @@
                     关于环境变量的问题, 如果你之前勾选Add Python 3.X to PATH这一步没有忘记的话, 一般都是已经配置完成了
                 </p>
                 <hr>
-        <h2>
-            运行python
-        </h2>
-            <p>
-                如果你是新手, 我建议使用python解释器, 因为如果是其他功能比较强的强大的编辑器一般都有代码补全功能, 这对你的学习不是特别<br>
-                好, 在入门阶段, python解释器就够了。
-            </p>
+            <h3>
+                运行python
+            </h3>
+                <p>
+                    如果你是新手, 我建议使用python解释器, 因为如果是其他功能比较强的强大的编辑器一般都有代码补全功能, 这对你的学习不是特别<br>
+                    好, 在入门阶段, python解释器就够了。
+                </p>
+        </div>
     </div>
     <div id="footer" style="background-color:#4d94ff;clear:both;text-align:center;height:27px;width:1490px;">
 版权 © Zhang-Xun-14</div>
