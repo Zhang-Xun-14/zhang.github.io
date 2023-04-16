@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>数据分析可视化展示</title>
+<script src="https://assets.pyecharts.org/assets/echarts.min.js" type="text/javascript"></script>
+<script src="https://assets.pyecharts.org/assets/themes/chalk.js" type="text/javascript"></script>
+<style>img {display:block;}</style></head>
+<body>
+<style>.box {  }; </style>
+<div class="box">
+<style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+<div class="chart-container" id="b75f8d10870742598d99d35a96c17443" style="">
+<p class="title" style="font-size: 18px; font-weight:bold;"> 天气信息</p>
+
+<table class="fl-table">
+<thead>
+<tr>
+<th>天气</th>
+<th>体感</th>
+<th>风向</th>
+<th>风力</th>
+<th>气压</th>
+<th>湿度</th>
+<th>日出</th>
+<th>日落</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>晴 18℃</td>
+<td>18℃</td>
+<td>西风</td>
+<td>4级</td>
+<td>998</td>
+<td>14%</td>
+<td>05:33</td>
+<td>18:44</td>
+</tr>
+</tbody>
+</table>
+</div>
+<style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+<div class="chart-container" id="ba85c73306994acc845a90a2355aed18" style="">
+<p class="title"> </p>
+<p class="subtitle"> </p>
+<table border="False" style="width:1500px; height:200px;">
+<thead>
+<tr>
+<th>过敏指数：极易发</th>
+<th>穿衣指数：较舒适</th>
+<th>钓鱼指数：适宜</th>
+<th>感冒指数：较易发</th>
+<th>紫外线强度指数：弱</th>
+<th>洗车指数：较适宜</th>
+<th>运动指数：较不宜</th>
+<th>雨伞指数：不带伞</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>天气条件极易诱发过敏，易过敏人群尽量减少外出，外出宜穿长衣长裤并佩戴好眼镜...</td>
+<td>建议着薄外套、开衫牛仔衫裤等服装。年老体弱者应适当添加衣物，宜着夹克衫、薄...</td>
+<td>白天风和日丽，适宜垂钓，渺渺蓝天，悠悠白云将陪伴你度过愉快的垂钓时光。</td>
+<td>天凉，昼夜温差较大，较易发生感冒，请适当增减衣服，体质较弱的朋友请注意适当防护。</td>
+<td>紫外线强度较弱，建议出门前涂擦SPF在12-15之间、PA+的防晒护肤品。</td>
+<td>较适宜洗车，未来一天无雨，风力较小，擦洗一新的汽车至少能保持一天。</td>
+<td>有扬沙或浮尘，建议适当停止户外运动，选择在室内进行运动，以避免吸入更多沙尘...</td>
+<td>天气较好，不会降水，因此您可放心出门，无须带雨伞。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="chart-container" id="9266f0be15354cdf8245dc657d57f453" style="width:1500px; height:500px;"></div>
+<script>
+        var chart_9266f0be15354cdf8245dc657d57f453 = echarts.init(
+            document.getElementById('9266f0be15354cdf8245dc657d57f453'), 'chalk', {renderer: 'canvas'});
+        var option_9266f0be15354cdf8245dc657d57f453 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "line",
+            "name": "\u6700\u9ad8\u6c14\u6e29",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "\u4eca\u5929 (04-15)\n\u897f\u98ce 3-5\u7ea7\n\u591a\u4e91\u8f6c\u6674",
+                    "20"
+                ],
+                [
+                    "\u660e\u5929 (04-16)\n\u897f\u5357\u98ce 4-5\u7ea7\n\u6674\u8f6c\u591a\u4e91",
+                    "20"
+                ],
+                [
+                    "\u5468\u4e00 (04-17)\n\u5357\u98ce 4-5\u7ea7\n\u591a\u4e91",
+                    "19"
+                ],
+                [
+                    "\u5468\u4e8c (04-18)\n\u4e1c\u5357\u98ce \u5fae\u98ce\n\u591a\u4e91",
+                    "19"
+                ],
+                [
+                    "\u5468\u4e09 (04-19)\n\u5357\u98ce \u5fae\u98ce\n\u591a\u4e91\u8f6c\u9634",
+                    "21"
+                ],
+                [
+                    "\u5468\u56db (04-20)\n\u4e1c\u5317\u98ce \u5fae\u98ce\n\u9634",
+                    "18"
+                ],
+                [
+                    "\u5468\u4e94 (04-21)\n\u5357\u98ce \u5fae\u98ce\n\u591a\u4e91\u8f6c\u6674",
+                    "23"
+                ],
+                [
+                    "\u5468\u516d (04-22)\n\u5317\u98ce \u5fae\u98ce\n\u9634",
+                    "18"
+                ],
+                [
+                    "\u5468\u65e5 (04-23)\n\u5357\u98ce \u5fae\u98ce\n\u5c0f\u96e8",
+                    "16"
+                ],
+                [
+                    "\u5468\u4e00 (04-24)\n\u5317\u98ce 3-5\u7ea7\n\u5c0f\u96e8\u8f6c\u9634",
+                    "19"
+                ],
+                [
+                    "\u5468\u4e8c (04-25)\n\u897f\u98ce 4-5\u7ea7\n\u9634\u8f6c\u6674",
+                    "20"
+                ],
+                [
+                    "\u5468\u4e09 (04-26)\n\u897f\u5317\u98ce 4-5\u7ea7\n\u9634",
+                    "21"
+                ],
+                [
+                    "\u5468\u56db (04-27)\n\u4e1c\u5357\u98ce 4-5\u7ea7\n\u5c0f\u96e8\u8f6c\u9634",
+                    "19"
+                ],
+                [
+                    "\u5468\u4e94 (04-28)\n\u5357\u98ce 3-5\u7ea7\n\u591a\u4e91\u8f6c\u9634",
+                    "23"
+                ],
+                [
+                    "\u5468\u516d (04-29)\n\u897f\u98ce \u5fae\u98ce\n\u9634",
+                    "29"
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "name": "\u6700\u5927\u503c",
+                        "type": "max"
+                    },
+                    {
+                        "name": "\u6700\u5c0f\u503c",
+                        "type": "min"
+                    }
+                ]
+            },
+            "markLine": {
+                "silent": false,
+                "precision": 2,
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "name": "\u5e73\u5747\u503c",
+                        "type": "average"
+                    }
+                ]
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "\u6700\u4f4e\u6c14\u6e29",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "\u4eca\u5929 (04-15)\n\u897f\u98ce 3-5\u7ea7\n\u591a\u4e91\u8f6c\u6674",
+                    "6"
+                ],
+                [
+                    "\u660e\u5929 (04-16)\n\u897f\u5357\u98ce 4-5\u7ea7\n\u6674\u8f6c\u591a\u4e91",
+                    "10"
+                ],
+                [
+                    "\u5468\u4e00 (04-17)\n\u5357\u98ce 4-5\u7ea7\n\u591a\u4e91",
+                    "8"
+                ],
+                [
+                    "\u5468\u4e8c (04-18)\n\u4e1c\u5357\u98ce \u5fae\u98ce\n\u591a\u4e91",
+                    "15"
+                ],
+                [
+                    "\u5468\u4e09 (04-19)\n\u5357\u98ce \u5fae\u98ce\n\u591a\u4e91\u8f6c\u9634",
+                    "11"
+                ],
+                [
+                    "\u5468\u56db (04-20)\n\u4e1c\u5317\u98ce \u5fae\u98ce\n\u9634",
+                    "9"
+                ],
+                [
+                    "\u5468\u4e94 (04-21)\n\u5357\u98ce \u5fae\u98ce\n\u591a\u4e91\u8f6c\u6674",
+                    "10"
+                ],
+                [
+                    "\u5468\u516d (04-22)\n\u5317\u98ce \u5fae\u98ce\n\u9634",
+                    "8"
+                ],
+                [
+                    "\u5468\u65e5 (04-23)\n\u5357\u98ce \u5fae\u98ce\n\u5c0f\u96e8",
+                    "6"
+                ],
+                [
+                    "\u5468\u4e00 (04-24)\n\u5317\u98ce 3-5\u7ea7\n\u5c0f\u96e8\u8f6c\u9634",
+                    "8"
+                ],
+                [
+                    "\u5468\u4e8c (04-25)\n\u897f\u98ce 4-5\u7ea7\n\u9634\u8f6c\u6674",
+                    "8"
+                ],
+                [
+                    "\u5468\u4e09 (04-26)\n\u897f\u5317\u98ce 4-5\u7ea7\n\u9634",
+                    "9"
+                ],
+                [
+                    "\u5468\u56db (04-27)\n\u4e1c\u5357\u98ce 4-5\u7ea7\n\u5c0f\u96e8\u8f6c\u9634",
+                    "6"
+                ],
+                [
+                    "\u5468\u4e94 (04-28)\n\u5357\u98ce 3-5\u7ea7\n\u591a\u4e91\u8f6c\u9634",
+                    "10"
+                ],
+                [
+                    "\u5468\u516d (04-29)\n\u897f\u98ce \u5fae\u98ce\n\u9634",
+                    "12"
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "name": "\u5468\u6700\u4f4e",
+                        "x": 1,
+                        "y": -1.5,
+                        "value": -2
+                    }
+                ]
+            },
+            "markLine": {
+                "silent": false,
+                "precision": 2,
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "name": "\u5e73\u5747\u503c",
+                        "type": "average"
+                    },
+                    {
+                        "xAxis": "90%",
+                        "yAxis": "max",
+                        "symbol": "none"
+                    },
+                    {
+                        "name": "\u6700\u9ad8\u70b9",
+                        "type": "max",
+                        "symbol": "circle"
+                    }
+                ]
+            },
+            "zlevel": 0,
+            "z": 0
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u6700\u9ad8\u6c14\u6e29",
+                "\u6700\u4f4e\u6c14\u6e29"
+            ],
+            "selected": {
+                "\u6700\u9ad8\u6c14\u6e29": true,
+                "\u6700\u4f4e\u6c14\u6e29": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "axis",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "type": "category",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisLabel": {
+                "interval": "0"
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "boundaryGap": false,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u4eca\u5929 (04-15)\n\u897f\u98ce 3-5\u7ea7\n\u591a\u4e91\u8f6c\u6674",
+                "\u660e\u5929 (04-16)\n\u897f\u5357\u98ce 4-5\u7ea7\n\u6674\u8f6c\u591a\u4e91",
+                "\u5468\u4e00 (04-17)\n\u5357\u98ce 4-5\u7ea7\n\u591a\u4e91",
+                "\u5468\u4e8c (04-18)\n\u4e1c\u5357\u98ce \u5fae\u98ce\n\u591a\u4e91",
+                "\u5468\u4e09 (04-19)\n\u5357\u98ce \u5fae\u98ce\n\u591a\u4e91\u8f6c\u9634",
+                "\u5468\u56db (04-20)\n\u4e1c\u5317\u98ce \u5fae\u98ce\n\u9634",
+                "\u5468\u4e94 (04-21)\n\u5357\u98ce \u5fae\u98ce\n\u591a\u4e91\u8f6c\u6674",
+                "\u5468\u516d (04-22)\n\u5317\u98ce \u5fae\u98ce\n\u9634",
+                "\u5468\u65e5 (04-23)\n\u5357\u98ce \u5fae\u98ce\n\u5c0f\u96e8",
+                "\u5468\u4e00 (04-24)\n\u5317\u98ce 3-5\u7ea7\n\u5c0f\u96e8\u8f6c\u9634",
+                "\u5468\u4e8c (04-25)\n\u897f\u98ce 4-5\u7ea7\n\u9634\u8f6c\u6674",
+                "\u5468\u4e09 (04-26)\n\u897f\u5317\u98ce 4-5\u7ea7\n\u9634",
+                "\u5468\u56db (04-27)\n\u4e1c\u5357\u98ce 4-5\u7ea7\n\u5c0f\u96e8\u8f6c\u9634",
+                "\u5468\u4e94 (04-28)\n\u5357\u98ce 3-5\u7ea7\n\u591a\u4e91\u8f6c\u9634",
+                "\u5468\u516d (04-29)\n\u897f\u98ce \u5fae\u98ce\n\u9634"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u672a\u676515\u5929\u6c14\u6e29\u53d8\u5316",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "toolbox": {
+        "show": true,
+        "orient": "horizontal",
+        "itemSize": 15,
+        "itemGap": 10,
+        "left": "80%",
+        "feature": {
+            "saveAsImage": {
+                "type": "png",
+                "backgroundColor": "auto",
+                "connectedBackgroundColor": "#fff",
+                "show": true,
+                "title": "\u4fdd\u5b58\u4e3a\u56fe\u7247",
+                "pixelRatio": 1
+            },
+            "restore": {
+                "show": true,
+                "title": "\u8fd8\u539f"
+            },
+            "dataView": {
+                "show": true,
+                "title": "\u6570\u636e\u89c6\u56fe",
+                "readOnly": false,
+                "lang": [
+                    "\u6570\u636e\u89c6\u56fe",
+                    "\u5173\u95ed",
+                    "\u5237\u65b0"
+                ],
+                "backgroundColor": "#fff",
+                "textareaColor": "#fff",
+                "textareaBorderColor": "#333",
+                "textColor": "#000",
+                "buttonColor": "#c23531",
+                "buttonTextColor": "#fff"
+            },
+            "dataZoom": {
+                "show": true,
+                "title": {
+                    "zoom": "\u533a\u57df\u7f29\u653e",
+                    "back": "\u533a\u57df\u7f29\u653e\u8fd8\u539f"
+                },
+                "icon": {},
+                "xAxisIndex": false,
+                "yAxisIndex": false,
+                "filterMode": "filter"
+            },
+            "magicType": {
+                "show": true,
+                "type": [
+                    "line",
+                    "bar",
+                    "stack",
+                    "tiled"
+                ],
+                "title": {
+                    "line": "\u5207\u6362\u4e3a\u6298\u7ebf\u56fe",
+                    "bar": "\u5207\u6362\u4e3a\u67f1\u72b6\u56fe",
+                    "stack": "\u5207\u6362\u4e3a\u5806\u53e0",
+                    "tiled": "\u5207\u6362\u4e3a\u5e73\u94fa"
+                },
+                "icon": {}
+            },
+            "brush": {
+                "icon": {},
+                "title": {
+                    "rect": "\u77e9\u5f62\u9009\u62e9",
+                    "polygon": "\u5708\u9009",
+                    "lineX": "\u6a2a\u5411\u9009\u62e9",
+                    "lineY": "\u7eb5\u5411\u9009\u62e9",
+                    "keep": "\u4fdd\u6301\u9009\u62e9",
+                    "clear": "\u6e05\u9664\u9009\u62e9"
+                }
+            }
+        }
+    }
+};
+        chart_9266f0be15354cdf8245dc657d57f453.setOption(option_9266f0be15354cdf8245dc657d57f453);
+    </script>
+</div>
+<script>
+</script>
+</body>
+</html>
