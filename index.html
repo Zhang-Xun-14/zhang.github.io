@@ -12,7 +12,8 @@
     <script>
         const url = "https://tianqi.so.com/weather/101090501";
 
-        $.get(url, function(data){
+        $.get(url, function(data, status){
+            console.log(status);
             var list = data.ready(function(){
                 $("div.weather-card > ul.weather-columns > li > div")
             });
