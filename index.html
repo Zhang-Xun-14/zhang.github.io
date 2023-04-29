@@ -1,122 +1,88 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="zh" class="" style="background-color: rgb(183, 217, 251); --ntp-theme-text-color:rgba(0, 0, 0, 1);">
+<html dir="ltr" lang="zh" class="" style="background-color: rgb(169, 210, 250); --ntp-theme-text-color:rgba(0, 0, 0, 1);">
 <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Zhang Xun">
-    <title>PassWord</title>
-    <style>
-        h1 {font-size:40px;}
-        h2 {font-size:36px;}
-        h3 {font-size:33px;}
-        h4 {font-size:30px;}
-        h5 {font-size:27px;}
-        h6 {font-size:25px;}
-        p {font-weight:600; font-size:22px;}
-        pre {font-weight:700; font-size:22px;}
-        p.r {color:red}
-        html {
-            --ntp-focus-shadow-color: rgba(var(--google-blue-600-rgb), .4);
-            --ntp-theme-text-color: var(--google-grey-800);
-            background-color: rgba(183, 217, 251, 1);
-            height: 100%;
-        }
-        button.gr {
-            background-color: rgb(0, 151, 0)
-        }
-        input.wg {
-            background-color: rgb(204, 251, 204)
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>未来15日天气</title>
+    <script src="https://cdn.staticfile.org/axios/1.4.0/axios.js"></script>
+    <script src="https://cdn.staticfile.org/cheerio/0.22.0/index.js"></script>
+    <script src="https://cdn.staticfile.org/Chart.js/3.9.1/chart.js"></script>
 </head>
 <body>
-    <div id="container" style="width:1500px">
-    <div id="header" style="background-color:#4d94ff;clear:both;text-align:center;height:75px;width:1490px;">
-        <h1 style="margin-bottom:0;">
-            <big>
-                欢迎使用密码加密
-            </big>
-        </h1>
-    </div>
-    <hr>
-    <div id="menu" style="height:550px;width:1450px;text-align:center;">
-        <!--<form name="input" action="password.php" method="post" style="text-align:center">-->
-        <form name="input" style="text-align:center">
-            <big>数据:</big> <input style="width:1250px;height:150px;margin-bottom:5;" id="contents" rows="10" class="wg">
-            <br>
-            <br>
-            <button class="gr" type="submit" style="width:80px;height:50px;" onclick="j()">加密</button>
-            <script>
-            function j() {
-                var n = -1;
-                var data_input = document.getElementById('contents').value;
-                var data = data_input.split('');
-                for (let x in data) {
-                    n++;
-                    if (data.length - n >= 3) {
-                        data.push(data[0]);
-                        data.shift();
+    <div id="myChart"></div>
+    <script>
+        const url = "https://tianqi.so.com/weather/101090501";
+
+    axios.get(url).then((resp) => {
+        var $ = cheerio.load(resp.data);
+        var list = $("div.weather-card > ul.weather-columns > li > div");
+        var dates = [], weather = [], temperature = [], wind = [], index = -1;
+        for (let i = 0; i < list.length; i++) {
+            var divd = list.eq(i).text();
+            index += 1;
+            switch (index % 7){
+                case 0:
+                case 2:
+                break;
+                case 1: dates.push(divd)
+                break;
+                case 3: weather.push(divd.replace("\\n", "").trim())
+                break;
+                case 4: temperature.push(divd)
+                break;
+                case 5: 
+                    if (divd.includes('风')){
+                        wind.push(divd);
+                        hello += 1;
                     }
-                }
-                for (var l = 0; l < data.length - 3; l++) {
-                    var a = Math.floor(Math.random() * (0 - 100)) + 100;
-                    if (a <= 15) {
-                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, 'a/*3');
-                        break;
-                    } else if (a <= 30) {
-                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, '*/4b');
-                        break;
-                    } else if (a <= 50) {
-                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, 'kx/*1');
-                        break;
-                    } else if (a <= 65) {
-                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, 'cs*/k');
-                        break;
-                    } else if (a <= 80) {
-                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, 'a*/ll');
-                        break;
-                    } else {
-                        data.splice(Math.floor(Math.random() * (0 - data.length)) + data.length, 0, 'k<&b');
-                    }
-                }
-                data = data.join('');
-                var base = encodeURI(data);
-                var basezx = btoa(base);
-                data = '#26iq' + basezx;
-                // document.getElementById('contents').value=data;
-                alert(data);
+                break;
+                default: wind.push(divd)
             }
-            </script>
-            <button class="gr" type="submit" style="width:80px;height:50px;" onclick="l()">解密</button>
-            <script>
-                function l() {
-                    var data_input = document.getElementById('contents').value;
-                    if (data_input.indexOf("#26iq") != -1) {
-                        var data = data_input.replace('#26iq', '');
-                        data = atob(data);
-                        data = decodeURI(data);
-                        data = data.replace('a/*3', '');
-                        data = data.replace('*/4b', '');
-                        data = data.replace('kx/*1', '');
-                        data = data.replace('cs*/k', '');
-                        data = data.replace('a*/ll', '');
-                        data = data.replace('k<&b', '');
-                        data = data.split('');
-                        for (let i = 0; i < data.length; i++) {
-                            if (i + 2 < data.length) {
-                                data.unshift(data[data.length - 1]);
-                                data.pop();
-                            }
-                        }
-                        data = data.join('')
-                        // document.getElementById('contents').value=data;
-                        alert(data);
-                    }
+        }
+        var days = [];
+        for (let len = 0; len < dates.length; len++) {
+            days.push(dates[len] + "\n" + wind[len] + "" + weather[len]);
+        }
+        var low = [], high = [];
+        for (let key = 0; key < temperature.length; key++) {
+            const element = temperature[key].split("/");
+            low.push(element[0]);
+            high.push(element[1].replace("℃", ""));
+        }
+        const ctx = document.getElementById('myChart');
+        const data = {
+            labels: days,
+            datasets: [{
+                type: 'line',
+                label: '折线图数据集高低',
+                data: low,
+                borderColor: 'rgb(62, 48, 253)',
+            }, {
+                type: 'line',
+                label: '折线图数据集高',
+                data: high,
+                fill: false,
+                borderColor: 'rgb(255, 160, 26)'
+            }]
+        };
+        const config = {
+            type: 'scatter',
+            data: data,
+            options: {
+                responsive: true, // 设置图表为响应式，根据屏幕窗口变化而变化
+                maintainAspectRatio: false,// 保持图表原有比例
+                scales: {
+                y: {
+                    beginAtZero: true
                 }
-            </script>
-            <!--https://zhang-xun-14.github.io/zhang.github.io/password.php-->
-        </form>
-    </div>
-    <div id="footer" style="background-color:#4d94ff;clear:both;text-align:center;height:27px;width:1490px;">
-版权 © Zhang-Xun-14</div>
+                }
+            }
+        };
+        const myChart = new Chart(ctx, config);
+        // console.log(high)
+    }).catch((err) => {
+        console.log(err)
+    })
+    </script>
+    <!-- <div style="background-color: rgb(255, 160, 26)"></div> -->
 </body>
 </html>
