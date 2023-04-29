@@ -10,78 +10,81 @@
 <body>
     <div id="myChart"></div>
     <script>
+        var axios = require("axios")
+        var cheerio = require("cheerio")
+        var Chart = require("chart.js")
         const url = "https://tianqi.so.com/weather/101090501";
 
-    axios.get(url).then((resp) => {
-        var $ = cheerio.load(resp.data);
-        var list = $("div.weather-card > ul.weather-columns > li > div");
-        var dates = [], weather = [], temperature = [], wind = [], index = -1;
-        for (let i = 0; i < list.length; i++) {
-            var divd = list.eq(i).text();
-            index += 1;
-            switch (index % 7){
-                case 0:
-                case 2:
-                break;
-                case 1: dates.push(divd)
-                break;
-                case 3: weather.push(divd.replace("\\n", "").trim())
-                break;
-                case 4: temperature.push(divd)
-                break;
-                case 5: 
-                    if (divd.includes('风')){
-                        wind.push(divd);
-                        hello += 1;
+        axios.get(url).then((resp) => {
+            var $ = cheerio.load(resp.data);
+            var list = $("div.weather-card > ul.weather-columns > li > div");
+            var dates = [], weather = [], temperature = [], wind = [], index = -1;
+            for (let i = 0; i < list.length; i++) {
+                var divd = list.eq(i).text();
+                index += 1;
+                switch (index % 7){
+                    case 0:
+                    case 2:
+                    break;
+                    case 1: dates.push(divd)
+                    break;
+                    case 3: weather.push(divd.replace("\\n", "").trim())
+                    break;
+                    case 4: temperature.push(divd)
+                    break;
+                    case 5: 
+                        if (divd.includes('风')){
+                            wind.push(divd);
+                            hello += 1;
+                        }
+                    break;
+                    default: wind.push(divd)
+                }
+            }
+            var days = [];
+            for (let len = 0; len < dates.length; len++) {
+                days.push(dates[len] + "\n" + wind[len] + "" + weather[len]);
+            }
+            var low = [], high = [];
+            for (let key = 0; key < temperature.length; key++) {
+                const element = temperature[key].split("/");
+                low.push(element[0]);
+                high.push(element[1].replace("℃", ""));
+            }
+            const ctx = document.getElementById('myChart');
+            const data = {
+                labels: days,
+                datasets: [{
+                    type: 'line',
+                    label: '折线图数据集最低气温',
+                    data: low,
+                    borderColor: 'rgb(62, 48, 253)',
+                }, {
+                    type: 'line',
+                    label: '折线图数据集最高气温',
+                    data: high,
+                    fill: false,
+                    borderColor: 'rgb(255, 160, 26)'
+                }]
+            };
+            const config = {
+                type: 'scatter',
+                data: data,
+                options: {
+                    responsive: true, // 设置图表为响应式，根据屏幕窗口变化而变化
+                    maintainAspectRatio: false,// 保持图表原有比例
+                    scales: {
+                    y: {
+                        beginAtZero: true
                     }
-                break;
-                default: wind.push(divd)
-            }
-        }
-        var days = [];
-        for (let len = 0; len < dates.length; len++) {
-            days.push(dates[len] + "\n" + wind[len] + "" + weather[len]);
-        }
-        var low = [], high = [];
-        for (let key = 0; key < temperature.length; key++) {
-            const element = temperature[key].split("/");
-            low.push(element[0]);
-            high.push(element[1].replace("℃", ""));
-        }
-        const ctx = document.getElementById('myChart');
-        const data = {
-            labels: days,
-            datasets: [{
-                type: 'line',
-                label: '折线图数据集高低',
-                data: low,
-                borderColor: 'rgb(62, 48, 253)',
-            }, {
-                type: 'line',
-                label: '折线图数据集高',
-                data: high,
-                fill: false,
-                borderColor: 'rgb(255, 160, 26)'
-            }]
-        };
-        const config = {
-            type: 'scatter',
-            data: data,
-            options: {
-                responsive: true, // 设置图表为响应式，根据屏幕窗口变化而变化
-                maintainAspectRatio: false,// 保持图表原有比例
-                scales: {
-                y: {
-                    beginAtZero: true
+                    }
                 }
-                }
-            }
-        };
-        const myChart = new Chart(ctx, config);
-        // console.log(high)
-    }).catch((err) => {
-        console.log(err)
-    })
+            };
+            const myChart = new Chart(ctx, config);
+            // console.log(high)
+        }).catch((err) => {
+            console.log(err)
+        })
     </script>
     <!-- <div style="background-color: rgb(255, 160, 26)"></div> -->
 </body>
