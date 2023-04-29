@@ -51,7 +51,7 @@
                 high.push(element[1].replace("℃", ""));
             }
             const ctx = document.getElementById('myChart');
-            const data = {
+            const datas = {
                 labels: days,
                 datasets: [{
                     type: 'line',
@@ -68,7 +68,7 @@
             };
             const config = {
                 type: 'scatter',
-                data: data,
+                data: datas,
                 options: {
                     responsive: true, // 设置图表为响应式，根据屏幕窗口变化而变化
                     maintainAspectRatio: false,// 保持图表原有比例
